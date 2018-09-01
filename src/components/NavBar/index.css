@@ -1,0 +1,44 @@
+.nav-bar-title-second {
+    flex-grow: 1;
+    font-size: 5vw;
+    color: #ff9933;
+    font-family: 'Lobster', cursive;
+    z-index: 10;
+}
+
+.nav-bar-title-first {
+    flex-grow: 1;
+    font-size: 5vw;
+    color: #3DBDFF;
+    z-index: 10;
+}
+
+
+.nav-bar-login-button {
+    color: #3DBDFF;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.5vw;
+}
+
+.nav-bar-logo {
+    background-image: url('./super-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10vw;
+    height: 5vw;
+    z-index: 10;
+}
+
+.moving-car{
+    height: 4vw;
+    width: 8vw;
+    z-index: -1;
+}
+
+.nav-bar-menu-button {
+
+}
+
+.nav-bar {
+    background-color: white;
+}
