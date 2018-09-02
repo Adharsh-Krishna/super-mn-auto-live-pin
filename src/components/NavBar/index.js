@@ -7,13 +7,10 @@ import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Slide from "@material-ui/core/es/Slide/Slide";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import Switch from "@material-ui/core/es/Switch/Switch";
 import Divider from "@material-ui/core/es/Divider/Divider";
 import Fade from "@material-ui/core/es/Fade/Fade";
 import Toolbar from "@material-ui/core/es/Toolbar/Toolbar";
 import SwipeableDrawer from "@material-ui/core/es/SwipeableDrawer/SwipeableDrawer";
-import Typography from "@material-ui/core/es/Typography/Typography";
 import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
@@ -120,27 +117,7 @@ class NavBar extends React.Component {
                                                 <ChevronLeftIcon/>
                                             </IconButton>
                                         </div>
-                                        {/*<div className="nav-bar-drawer-item">*/}
-                                            {/*<span className="nav-bar-title-second"> LivePin </span>*/}
-                                        {/*</div>*/}
-                                        <div className="nav-bar-drawer-item">
-                                            About
-                                        </div>
-                                        <div className="nav-bar-drawer-item">
-                                            Product Packages
-                                        </div>
-                                        <div className="nav-bar-drawer-item">
-                                            Order Now
-                                        </div>
-                                        <div className="nav-bar-drawer-item">
-                                            FAQ
-                                        </div>
-                                        <div className="nav-bar-drawer-item">
-                                            Contact Us
-                                        </div>
-                                        <div className="nav-bar-drawer-item">
-                                            Privacy Policy
-                                        </div>
+                                        {this.renderMenuItems()}
                                         <Divider/>
                                     </div>
                                 </SwipeableDrawer>
@@ -207,8 +184,6 @@ class NavBar extends React.Component {
                                 </Drawer>
                             </Grid>
                         </Grid>
-
-
                     </Toolbar>
                 </AppBar>
             </div>
