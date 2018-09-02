@@ -35,6 +35,20 @@
     z-index: -1;
 }
 
+.nav-bar-drawer{
+    background-color: #3DBDFF;
+    color:white;
+    width:20vw;
+}
+
+.nav-bar-drawer-item{
+    font-family: 'Heebo', sans-serif;
+    font-size: 2vw;
+    color:white;
+    height: 7vw;
+    padding: 5px;
+}
+
 .nav-bar-menu-button {
 
 }

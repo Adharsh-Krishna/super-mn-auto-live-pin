@@ -12,6 +12,10 @@ import Switch from "@material-ui/core/es/Switch/Switch";
 import Divider from "@material-ui/core/es/Divider/Divider";
 import Fade from "@material-ui/core/es/Fade/Fade";
 import Toolbar from "@material-ui/core/es/Toolbar/Toolbar";
+import SwipeableDrawer from "@material-ui/core/es/SwipeableDrawer/SwipeableDrawer";
+import Typography from "@material-ui/core/es/Typography/Typography";
+import Drawer from "@material-ui/core/es/Drawer/Drawer";
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 
 const navBarStyles = {backgroundColor: 'white'};
@@ -20,9 +24,12 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            labels: ["About", "Products Packages", "Order Now", "FAQ", "Privacy Policy","Contact Us"],
             height: props.height,
             width: props.width,
-            checked: false
+            checked: false,
+            right: false,
+            open: false
         };
     };
 
@@ -37,6 +44,20 @@ class NavBar extends React.Component {
 
     handleChange = () => {
         this.setState(state => ({checked: !state.checked}));
+    };
+
+    handleDrawerOpen = () => {
+        this.setState({open: true});
+    };
+
+    handleDrawerClose = () => {
+        this.setState({open: false});
+    };
+
+    toggleDrawer = (side, open) => () => {
+        this.setState({
+            [side]: open,
+        });
     };
 
     componentDidMount() {
@@ -80,8 +101,49 @@ class NavBar extends React.Component {
                         <Grid item xs={1}>
                             <div>
                                 <IconButton className="nav-bar-menu-button" aria-label="Menu">
-                                    <MenuIcon style={{fontSize: "5vw"}}/>
+                                    <MenuIcon style={{fontSize: "5vw"}} onClick={this.toggleDrawer('right', true)}/>
                                 </IconButton>
+                                <SwipeableDrawer
+                                    anchor="right"
+                                    open={this.state.right}
+                                    onClose={this.toggleDrawer('right', false)}
+                                    onOpen={this.toggleDrawer('right', true)}>
+                                    <div
+                                        align="center"
+                                        tabIndex={0}
+                                        role="button"
+                                        onClick={this.toggleDrawer('right', false)}
+                                        onKeyDown={this.toggleDrawer('right', false)}
+                                        className="nav-bar-drawer">
+                                        <div style={{height: '7vw',padding:5}}>
+                                            <IconButton onClick={this.handleDrawerClose}>
+                                                <ChevronLeftIcon/>
+                                            </IconButton>
+                                        </div>
+                                        {/*<div className="nav-bar-drawer-item">*/}
+                                            {/*<span className="nav-bar-title-second"> LivePin </span>*/}
+                                        {/*</div>*/}
+                                        <div className="nav-bar-drawer-item">
+                                            About
+                                        </div>
+                                        <div className="nav-bar-drawer-item">
+                                            Product Packages
+                                        </div>
+                                        <div className="nav-bar-drawer-item">
+                                            Order Now
+                                        </div>
+                                        <div className="nav-bar-drawer-item">
+                                            FAQ
+                                        </div>
+                                        <div className="nav-bar-drawer-item">
+                                            Contact Us
+                                        </div>
+                                        <div className="nav-bar-drawer-item">
+                                            Privacy Policy
+                                        </div>
+                                        <Divider/>
+                                    </div>
+                                </SwipeableDrawer>
                             </div>
                         </Grid>
                     </Grid>
@@ -92,6 +154,16 @@ class NavBar extends React.Component {
         )
     };
 
+    renderMenuItems = () => {
+        let menuItems = [];
+        this.state.labels.forEach(el => {
+            menuItems.push(<div className="nav-bar-drawer-item">
+                {el}
+            </div>);
+        });
+        return menuItems;
+    };
+
     renderMobileView = () => {
         const {checked} = this.state;
 
@@ -100,7 +172,7 @@ class NavBar extends React.Component {
                 <AppBar position="fixed" style={navBarStyles}>
                     <Toolbar>
                         <Grid container>
-                            <Grid item xs={8} style={{padding:10}}>
+                            <Grid item xs={8} style={{padding: 10}}>
                                 <Slide direction="down" in={checked} timeout={1000} mountOnEnter unmountOnExit
                                        style={{position: 'absolute'}}>
                                     <div align="left" className="nav-bar-title-first">
@@ -117,8 +189,22 @@ class NavBar extends React.Component {
 
                             <Grid item xs={2}>
                                 <IconButton className="nav-bar-menu-button" aria-label="Menu">
-                                    <MenuIcon />
+                                    <MenuIcon onClick={this.handleDrawerOpen}/>
                                 </IconButton>
+                                <Drawer
+                                    variant="persistent"
+                                    open={this.state.open}
+                                    anchor="top">
+                                    <div style={{height: '10vw'}}>
+                                        <IconButton onClick={this.handleDrawerClose}>
+                                            <ChevronLeftIcon/>
+                                        </IconButton>
+                                    </div>
+                                    <Divider/>
+                                    <div style={{backgroundColor:'#3DBDFF'}}>
+                                        {this.renderMenuItems()}
+                                    </div>
+                                </Drawer>
                             </Grid>
                         </Grid>
 
