@@ -37,44 +37,30 @@ class Process extends React.Component {
         return (
             <div style={{backgroundColor: "#3DBDFF"}}>
                 <Grid container>
-                    <Grid container xs={6}>
-                        <Timeline lineColor="white">
-                            <TimelineEvent
-                                title="Product Enquiry"
-                                titleStyle={{fontFamily:'Lato',
-                                    fontSize: "2vw",
-                                    color: "white"}}
-                            >
+                    <Grid container xs={6} style={{padding: '3vw'}}>
+                        <Grid item xs={12}>
+                            <div className="process-main-text-left">
+                                Give us an enquiry
+                            </div>
+                            <div className="process-sub-text-left">
+                                Reach out to us to know more about our product
+                            </div>
+                        </Grid>
+                        <Grid item xs={12}>
 
-                            </TimelineEvent>
-                            <TimelineEvent
-                                title="Product Installation"
-                                titleStyle={{fontFamily:'Lato',
-                                    fontSize: "2vw",
-                                    color: "white"}}>
+                        </Grid>
+                        <Grid item xs={12}>
 
-                            </TimelineEvent>
-                            <TimelineEvent
-                                title="KYC Fulfillment"
-                                titleStyle={{fontFamily:'Lato',
-                                    fontSize: "2vw",
-                                    color: "white"}}>
+                        </Grid>
+                        <Grid item xs={12}>
 
-                            </TimelineEvent>
-                            <TimelineEvent
-                                title="Track Vehicles"
-                                titleStyle={{fontFamily:'Lato',
-                                    fontSize: "2vw",
-                                    color: "white"}}>
-
-                            </TimelineEvent>
-                        </Timeline>
+                        </Grid>
                     </Grid>
                     <Grid item xs={6} style={{padding: '3vw'}}>
-                        <div className="process-main-text">
+                        <div className="process-main-text-right">
                             Wondering how to get started?
                         </div>
-                        <div className="process-sub-text">
+                        <div className="process-sub-text-right">
                             Give us an enquiry and start tracking your vehicles seamlessly
                         </div>
                     </Grid>

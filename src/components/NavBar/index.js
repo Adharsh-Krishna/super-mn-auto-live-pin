@@ -15,7 +15,7 @@ import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 
-const navBarStyles = {backgroundColor: '#3DBDFF'};
+const navBarStyles = {backgroundColor: 'white',zDepthShadows:'none',boxShadow: 'none'};
 
 class NavBar extends React.Component {
     constructor(props) {

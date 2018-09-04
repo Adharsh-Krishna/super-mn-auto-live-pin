@@ -56,3 +56,13 @@
 .theft-alert-icon{
     background-image: url("6.png");
 }
+
+.iphone-img{
+    background-image: url("https://videotron.com/vtrn/images/resi/mobilite/appareils/telephones/app-iphone-se/res-app-iphone-se-vig-01-or_1200x1200.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}

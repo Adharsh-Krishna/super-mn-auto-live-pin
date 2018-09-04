@@ -56,7 +56,7 @@ class Package extends React.Component {
 
     renderDesktopView = () => {
         return (
-            <div>
+            <div className="hero-bkg-animated">
                 <Grid container style={{padding: "20px"}}>
                     <Grid item xs={12}>
                         <div className="main-text">

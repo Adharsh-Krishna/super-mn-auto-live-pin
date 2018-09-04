@@ -1,12 +1,26 @@
-.process-main-text{
+.process-main-text-right{
     font-family: 'Lato', sans-serif;
     font-size: 3.5vw;
     color: white;
     padding-bottom: 2vw;
 }
 
-.process-sub-text{
+.process-sub-text-right{
     font-family: 'Lato', sans-serif;
     font-size: 2vw;
     color: white;
+}
+
+.process-main-text-left{
+    font-family: 'Lato', sans-serif;
+    font-size: 3vw;
+    color: white;
+    padding-bottom: 2vw;
+}
+
+.process-sub-text-left{
+    font-family: 'Lato', sans-serif;
+    font-size: 2vw;
+    color: white;
+    padding-bottom: 2vw;
 }

@@ -105,6 +105,9 @@ class About extends React.Component {
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
+                    <div className="iphone-img">
+
+                    </div>
                 </Grid>
             </Grid>
         </div>)
