@@ -1,0 +1,76 @@
+.model1-image {
+    background-image: url("http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.card-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 3vw;
+    background-color: black;
+    color:white;
+}
+
+.main-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5vw;
+    color: #3DBDFF;
+    margin-bottom: 2vw;
+}
+
+.card-body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+    padding: 2vw;
+    text-align: justify;
+}
+.banner-main-text-left{
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5vw;
+    color: white;
+}
+
+.real-time-tracking-icon , .route-deviation-alert-icon ,
+.high-speed-alert-icon,.multi-vehicle-tracking-icon,
+.engine-immobiliser-icon,.theft-alert-icon{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 7vw;
+    height: 7vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.real-time-tracking-icon{
+    background-image: url("../About/1.png");
+}
+
+.route-deviation-alert-icon{
+    background-image: url("../About/2.png");
+}
+
+.high-speed-alert-icon{
+    background-image: url("../About/3.png");
+}
+
+.multi-vehicle-tracking-icon{
+    background-image: url("../About/4.png");
+}
+
+.engine-immobiliser-icon{
+    background-image: url("../About/5.png");
+}
+
+.theft-alert-icon{
+    background-image: url("../About/6.png");
+}
+
+.feature-text{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+}

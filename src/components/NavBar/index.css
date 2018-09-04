@@ -1,7 +1,7 @@
 .nav-bar-title-second {
     flex-grow: 1;
     font-size: 5vw;
-    color: #ff9933;
+    color: white;
     font-family: 'Lobster', cursive;
     z-index: 10;
 }
@@ -9,7 +9,7 @@
 .nav-bar-title-first {
     flex-grow: 1;
     font-size: 5vw;
-    color: #3DBDFF;
+    color: white;
     z-index: 10;
 }
 

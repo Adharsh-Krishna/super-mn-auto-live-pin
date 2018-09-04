@@ -45,7 +45,7 @@ class About extends React.Component {
 
 
     renderDesktopView= () =>{
-        return (<div className="banner" style={{padding:"5vw",backgroundColor:"#3DBDFF"}}>
+        return (<div className="banner" style={{padding:"3vw",backgroundColor:"#3DBDFF"}}>
             <Grid container>
                 <Grid container xs={6}>
                     <Grid item xs={12}>
@@ -111,7 +111,7 @@ class About extends React.Component {
     };
 
     renderMobileView = () =>{
-        return (<div className="banner" style={{padding:"5vw",backgroundColor:"#3DBDFF"}}>
+        return (<div className="banner" style={{padding:"3vw",backgroundColor:"#3DBDFF"}}>
             <Grid container>
                 <Grid container xs={12}>
                     <Grid item xs={12}>

@@ -15,7 +15,7 @@ import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 
-const navBarStyles = {backgroundColor: 'white'};
+const navBarStyles = {backgroundColor: '#3DBDFF'};
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -85,10 +85,10 @@ class NavBar extends React.Component {
                             </Slide>
                         </Grid>
                         <Grid item xs={1}>
-                            <Slide direction="right" in={checked} timeout={5000} mountOnEnter unmountOnExit
-                                   style={{position: 'absolute'}}>
-                                <div><img src="./car1.png" className="moving-car"></img></div>
-                            </Slide>
+                            {/*<Slide direction="right" in={checked} timeout={5000} mountOnEnter unmountOnExit*/}
+                                   {/*style={{position: 'absolute'}}>*/}
+                                {/*<div><img src="./car1.png" className="moving-car"></img></div>*/}
+                            {/*</Slide>*/}
                         </Grid>
                         <Grid item xs={1}>
                             <div>
