@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import CloseIcon from '@material-ui/icons/Close';
+import TrackVisibility from 'react-on-screen';
 
 import './index.css';
 import Dialog from "@material-ui/core/es/Dialog/Dialog";
@@ -15,6 +16,7 @@ import Slide from "@material-ui/core/es/Slide/Slide";
 import AppBar from "@material-ui/core/es/AppBar/AppBar";
 import Toolbar from "@material-ui/core/es/Toolbar/Toolbar";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
+import Fade from "@material-ui/core/es/Fade/Fade";
 
 const Transition = (props) => {
     return <Slide direction="up" {...props} />;
@@ -26,7 +28,8 @@ class Package extends React.Component {
         this.state = {
             height: props.height,
             width: props.width,
-            open: false
+            open: false,
+            checked:false
 
         }
     };
@@ -40,8 +43,13 @@ class Package extends React.Component {
     }
 
     componentDidMount() {
+        this.handleChange();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions.bind(this));
+    };
+
+    handleChange = () => {
+        this.setState(state => ({checked: !state.checked}));
     };
 
     handleClickOpen = () => {
@@ -52,9 +60,12 @@ class Package extends React.Component {
         this.setState({ open: false });
     };
 
+    change(){
 
+    }
 
     renderDesktopView = () => {
+        const {checked} = this.state;
         return (
             <div className="hero-bkg-animated">
                 <Grid container style={{padding: "20px"}}>
@@ -65,29 +76,35 @@ class Package extends React.Component {
                     </Grid>
                     <Grid container xs={12}>
                         <Grid item xs={4} style={{padding: '5vw'}}>
-                            <div style={{borderWidth: '10px', borderColor: '#3DBDFF', borderStyle: 'solid'}} onClick={this.handleClickOpen}>
-                                <div>
-                                    <CardMedia
-                                        component="img"
-                                        image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
-                                        title="Model 1"
-                                    />
-                                    <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
-                                        <div className="card-heading">
-                                            Model 1
+                            <div onClick={this.handleClickOpen}>
+                                <TrackVisibility once>
+                                    {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
+
+                                        <div>
+                                            <CardMedia
+                                                component="img"
+                                                image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
+                                                title="Model 1"
+                                            />
+                                            <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                                <div className="card-heading">
+                                                    Model 1
+                                                </div>
+                                                <div className="card-body">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                    quis nostrud exercitation ullamco laboris nisi u
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi u
-                                        </div>
-                                    </div>
-                                </div>
+                                    </Fade>}
+
+                                </TrackVisibility>
                             </div>
                         </Grid>
                         <Grid item xs={4} style={{padding: '5vw'}}>
-                            <div style={{borderWidth: '10px', borderColor: '#3DBDFF', borderStyle: 'solid'}}>
-
+                            <TrackVisibility once>
+                                {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                 <div>
                                     <CardMedia
                                         component="img"
@@ -106,11 +123,12 @@ class Package extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </Fade>}
+                            </TrackVisibility>
                         </Grid>
                         <Grid item xs={4} style={{padding: '5vw'}}>
-                            <div style={{borderWidth: '10px', borderColor: '#3DBDFF', borderStyle: 'solid'}}>
-
+                            <TrackVisibility once>
+                                {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                 <div>
                                     <CardMedia
                                         component="img"
@@ -129,7 +147,8 @@ class Package extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </Fade>}
+                            </TrackVisibility>
                         </Grid>
                     </Grid>
                     <Dialog

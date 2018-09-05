@@ -45,7 +45,7 @@ class About extends React.Component {
 
 
     renderDesktopView= () =>{
-        return (<div className="banner" style={{padding:"3vw",backgroundColor:"#3DBDFF"}}>
+        return (<div className="banner" style={{padding:"2vw",backgroundColor:"#3DBDFF"}}>
             <Grid container>
                 <Grid container xs={6}>
                     <Grid item xs={12}>
@@ -57,7 +57,7 @@ class About extends React.Component {
                             always stay connected to your car with MN Auto LivePin smart web and mobile applications.
                         </div>
                     </Grid>
-                    <Grid container xs={12} style={{margin:"2vw"}}>
+                    <Grid container xs={12} style={{margin:"0vw"}}>
                         <Grid item xs={4}>
                             <div className="real-time-tracking-icon">
                             </div>
@@ -80,7 +80,7 @@ class About extends React.Component {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid container xs={12} style={{margin:"2vw"}}>
+                    <Grid container xs={12} style={{margin:"0vw"}}>
                         <Grid item xs={4}>
                             <div className="multi-vehicle-tracking-icon">
                             </div>

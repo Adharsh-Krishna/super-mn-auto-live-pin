@@ -7,6 +7,8 @@ import Step from "@material-ui/core/es/Step/Step";
 import StepLabel from "@material-ui/core/es/StepLabel/StepLabel";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css';
+
 import Typography from "@material-ui/core/es/Typography/Typography";
 
 class Process extends React.Component {
@@ -37,25 +39,6 @@ class Process extends React.Component {
         return (
             <div style={{backgroundColor: "#3DBDFF"}}>
                 <Grid container>
-                    <Grid container xs={6} style={{padding: '3vw'}}>
-                        <Grid item xs={12}>
-                            <div className="process-main-text-left">
-                                Give us an enquiry
-                            </div>
-                            <div className="process-sub-text-left">
-                                Reach out to us to know more about our product
-                            </div>
-                        </Grid>
-                        <Grid item xs={12}>
-
-                        </Grid>
-                        <Grid item xs={12}>
-
-                        </Grid>
-                        <Grid item xs={12}>
-
-                        </Grid>
-                    </Grid>
                     <Grid item xs={6} style={{padding: '3vw'}}>
                         <div className="process-main-text-right">
                             Wondering how to get started?
@@ -63,6 +46,35 @@ class Process extends React.Component {
                         <div className="process-sub-text-right">
                             Give us an enquiry and start tracking your vehicles seamlessly
                         </div>
+                    </Grid>
+                    <Grid container xs={6} style={{padding: '3vw'}}>
+                        <VerticalTimeline>
+                            <VerticalTimelineElement
+                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                                position="right"
+                            >
+                                <Typography variant={"title"}>Started M.N Circuits Products</Typography>
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                className="vertical-timeline-element--work"
+                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                            >
+                                <Typography variant={"title"}>Started M.N Auto</Typography>
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                position="right"
+
+                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                            >
+                                <Typography variant={"title"}>Becomes a Private Limited Company</Typography>
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                className="vertical-timeline-element--work"
+                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                            >
+                                <Typography variant={"title"}>Registered the brand name “SUPER”</Typography>
+                            </VerticalTimelineElement>
+                        </VerticalTimeline>
                     </Grid>
                 </Grid>
             </div>
@@ -75,3 +87,36 @@ class Process extends React.Component {
 }
 
 export default Process;
+
+//<Grid item xs={12}>
+//                             <div className="process-main-text-left">
+//                                 Give us an enquiry
+//                             </div>
+//                             <div className="process-sub-text-left">
+//                                 Reach out to us to know more about our product
+//                             </div>
+//                         </Grid>
+//                         <Grid item xs={12}>
+//                             <div className="process-main-text-left">
+//                                 Give us an enquiry
+//                             </div>
+//                             <div className="process-sub-text-left">
+//                                 Reach out to us to know more about our product
+//                             </div>
+//                         </Grid>
+//                         <Grid item xs={12}>
+//                             <div className="process-main-text-left">
+//                                 Give us an enquiry
+//                             </div>
+//                             <div className="process-sub-text-left">
+//                                 Reach out to us to know more about our product
+//                             </div>
+//                         </Grid>
+//                         <Grid item xs={12}>
+//                             <div className="process-main-text-left">
+//                                 Give us an enquiry
+//                             </div>
+//                             <div className="process-sub-text-left">
+//                                 Reach out to us to know more about our product
+//                             </div>
+//                         </Grid>

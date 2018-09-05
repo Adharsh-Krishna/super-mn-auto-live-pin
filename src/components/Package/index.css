@@ -8,9 +8,10 @@
 
 .card-heading {
     font-family: 'Lato', sans-serif;
-    font-size: 3vw;
+    font-size: 2vw;
     background-color: black;
     color:white;
+    padding:1vw;
 }
 
 .main-text {
@@ -83,7 +84,7 @@
     margin: 0;
     text-align: center;
     box-sizing: border-box;
-    -webkit-animation: slide 20s linear infinite;
+    -webkit-animation: slide 5s linear infinite;
 }
 
 .hero-bkg-animated h1 {

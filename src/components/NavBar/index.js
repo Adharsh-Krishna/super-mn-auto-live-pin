@@ -71,13 +71,13 @@ class NavBar extends React.Component {
                 <AppBar position="fixed" style={navBarStyles}>
                     <Grid container spacing={0} zeroMinWidth>
                         <Grid item xs={1} style={{padding: 5}}>
-                            <Fade in={checked} timeout={2000}>
+                            <Fade in={checked} timeout={3000}>
                                 <div className="nav-bar-logo">
                                 </div>
                             </Fade>
                         </Grid>
-                        <Grid item xs={8} style={{padding: 5}}>
-                            <Slide direction="down" in={checked} timeout={1000} mountOnEnter unmountOnExit
+                        <Grid item xs={8} style={{padding: 20}}>
+                            <Slide direction="down" in={checked} timeout={2000} mountOnEnter unmountOnExit
                                    style={{position: 'absolute'}}>
                                 <div align="left" className="nav-bar-title-first">
                                     MN Auto <span className="nav-bar-title-second"> LivePin </span>
@@ -149,6 +149,16 @@ class NavBar extends React.Component {
                 <AppBar position="fixed" style={navBarStyles}>
                     <Toolbar>
                         <Grid container>
+                            <Grid item xs={1} style={{padding: 5}}>
+                                <Fade in={checked} timeout={3000}>
+                                    <div className="nav-bar-logo">
+                                    </div>
+                                </Fade>
+                                {/*<Slide direction="right" in={checked} timeout={4000} mountOnEnter unmountOnExit*/}
+                                {/*style={{position: 'absolute'}}>*/}
+                                {/*<div><img src="./car1.png" className="moving-car"></img></div>*/}
+                                {/*</Slide>*/}
+                            </Grid>
                             <Grid item xs={8} style={{padding: 10}}>
                                 <Slide direction="down" in={checked} timeout={1000} mountOnEnter unmountOnExit
                                        style={{position: 'absolute'}}>
@@ -157,13 +167,8 @@ class NavBar extends React.Component {
                                     </div>
                                 </Slide>
                             </Grid>
-                            <Grid item xs={2}>
-                                <Slide direction="right" in={checked} timeout={4000} mountOnEnter unmountOnExit
-                                       style={{position: 'absolute'}}>
-                                    <div><img src="./car1.png" className="moving-car"></img></div>
-                                </Slide>
+                            <Grid item xs={1}>
                             </Grid>
-
                             <Grid item xs={2}>
                                 <IconButton className="nav-bar-menu-button" aria-label="Menu">
                                     <MenuIcon onClick={this.handleDrawerOpen}/>
