@@ -175,9 +175,131 @@ class Package extends React.Component {
         )
     };
 
-    render() {
-        return this.renderDesktopView();
+    renderMobileView = () => {
+        const {checked} = this.state;
+        return (
+            <div className="hero-bkg-animated">
+                <Grid container style={{padding: "20px"}}>
+                    <Grid item xs={12}>
+                        <div className="main-text">
+                            M N Auto brings you a wide variety of models to choose from
+                        </div>
+                    </Grid>
+                    <Grid container xs={12}>
+                        <Grid item xs={4} style={{padding: '2vw'}}>
+                            <div onClick={this.handleClickOpen}>
+                                <TrackVisibility once>
+                                    {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
+
+                                        <div>
+                                            <CardMedia
+                                                component="img"
+                                                image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
+                                                title="Model 1"
+                                            />
+                                            <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                                <div className="card-heading">
+                                                    Model 1
+                                                </div>
+                                                <div className="card-body">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                    quis nostrud exercitation ullamco laboris nisi u
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Fade>}
+
+                                </TrackVisibility>
+                            </div>
+                        </Grid>
+                        <Grid item xs={4} style={{padding: '2vw'}}>
+                            <TrackVisibility once>
+                                {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
+                                    <div>
+                                        <CardMedia
+                                            component="img"
+                                            image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
+                                            title="Model 2"
+                                        />
+                                        <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                            <div className="card-heading">
+                                                Model 2
+                                            </div>
+                                            <div className="card-body">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                nostrud exercitation ullamco laboris nisi u
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Fade>}
+                            </TrackVisibility>
+                        </Grid>
+                        <Grid item xs={4} style={{padding: '2vw'}}>
+                            <TrackVisibility once>
+                                {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
+                                    <div>
+                                        <CardMedia
+                                            component="img"
+                                            image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
+                                            title="Model 3"
+                                        />
+                                        <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                            <div className="card-heading">
+                                                Model 3
+                                            </div>
+                                            <div className="card-body">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                nostrud exercitation ullamco laboris nisi u
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Fade>}
+                            </TrackVisibility>
+                        </Grid>
+                    </Grid>
+                    <Dialog
+                        fullScreen
+                        open={this.state.open}
+                        onClose={this.handleClose}
+                        TransitionComponent={Transition}>
+                        <AppBar position="fixed">
+                            <Toolbar>
+                                <IconButton color="inherit" onClick={this.handleClose} aria-label="Close">
+                                    <CloseIcon />
+                                </IconButton>
+                                <Typography variant="title" color="inherit">
+                                    Sound
+                                </Typography>
+                                <Button color="inherit" onClick={this.handleClose}>
+                                    save
+                                </Button>
+                            </Toolbar>
+                        </AppBar>
+                    </Dialog>
+                </Grid>
+            </div>
+        )
     };
+
+    choose(width) {
+        if (width <= 480) {
+            return this.renderMobileView();
+        }
+        else return this.renderDesktopView();
+    }
+
+    render() {
+        return this.choose(this.state.width);
+    };
+
+    // render() {
+    //     return this.renderDesktopView();
+    // };
 }
 
 export default Package;

@@ -12,7 +12,7 @@ import Fade from "@material-ui/core/es/Fade/Fade";
 import Toolbar from "@material-ui/core/es/Toolbar/Toolbar";
 import SwipeableDrawer from "@material-ui/core/es/SwipeableDrawer/SwipeableDrawer";
 import Drawer from "@material-ui/core/es/Drawer/Drawer";
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 
 const navBarStyles = {backgroundColor: 'white',zDepthShadows:'none',boxShadow: 'none'};
@@ -97,8 +97,8 @@ class NavBar extends React.Component {
                         </Grid>
                         <Grid item xs={1}>
                             <div>
-                                <IconButton className="nav-bar-menu-button" aria-label="Menu">
-                                    <MenuIcon style={{fontSize: "5vw"}} onClick={this.toggleDrawer('right', true)}/>
+                                <IconButton className="nav-bar-menu-button" aria-label="Menu" style={{marginTop:'1.5vw'}}>
+                                    <MenuIcon style={{fontSize: "3vw"}} onClick={this.toggleDrawer('right', true)}/>
                                 </IconButton>
                                 <SwipeableDrawer
                                     anchor="right"
@@ -114,7 +114,7 @@ class NavBar extends React.Component {
                                         className="nav-bar-drawer">
                                         <div style={{height: '7vw',padding:5}}>
                                             <IconButton onClick={this.handleDrawerClose}>
-                                                <ChevronLeftIcon/>
+                                                <ChevronRightIcon/>
                                             </IconButton>
                                         </div>
                                         {this.renderMenuItems()}
@@ -179,7 +179,7 @@ class NavBar extends React.Component {
                                     anchor="top">
                                     <div style={{height: '10vw'}}>
                                         <IconButton onClick={this.handleDrawerClose}>
-                                            <ChevronLeftIcon/>
+                                            <ChevronRightIcon/>
                                         </IconButton>
                                     </div>
                                     <Divider/>

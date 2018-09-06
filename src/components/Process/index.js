@@ -35,11 +35,85 @@ class Process extends React.Component {
     };
 
     renderDesktopView = () => {
-
         return (
             <div style={{backgroundColor: "#3DBDFF"}}>
                 <Grid container>
-                    <Grid item xs={6} style={{padding: '3vw'}}>
+
+                    <Grid container xs={8} style={{padding: '3vw'}}>
+                        <VerticalTimeline>
+                            <VerticalTimelineElement
+                                iconStyle={{background: 'white', color: '#fff'}} position="left"
+                                position="left"
+
+                            >
+                                <Grid container>
+                                    <Grid iem xs={12}>
+                                        <div className="process-header">
+                                            Product Enquiry
+                                        </div>
+                                    </Grid>
+                                    <Grid iem xs={12}>
+                                        <div className="process-description" style={{marginTop: 0}}>
+                                            Give us an enquiry
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                iconStyle={{background: 'white', color: '#fff'}}
+                                position="left"
+                            >
+                                <Grid container>
+                                    <Grid iem xs={12}>
+                                        <div className="process-header">
+                                            Product Installation
+                                        </div>
+                                    </Grid>
+                                    <Grid iem xs={12}>
+                                        <div className="process-description" style={{marginTop: 0}}>
+                                            Install the product
+                                        </div>
+                                    </Grid>
+                                </Grid>
+
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                iconStyle={{background: 'white', color: '#fff'}}
+                                position="left"
+                            >
+                                <Grid container>
+                                    <Grid iem xs={12}>
+                                        <div className="process-header">
+                                            KYC Verification
+                                        </div>
+                                    </Grid>
+                                    <Grid iem xs={12}>
+                                        <div className="process-description" style={{marginTop: 0}}>
+                                            Fulfill the necessary KYC information
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </VerticalTimelineElement>
+                            <VerticalTimelineElement
+                                iconStyle={{background: 'white', color: '#fff'}}
+                                position="left"
+                            >
+                                <Grid container>
+                                    <Grid iem xs={12}>
+                                        <div className="process-header">
+                                            Use the Product
+                                        </div>
+                                    </Grid>
+                                    <Grid iem xs={12}>
+                                        <div className="process-description" style={{marginTop: 0}}>
+                                            Track your vehicles on the go
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </VerticalTimelineElement>
+                        </VerticalTimeline>
+                    </Grid>
+                    <Grid item xs={4} style={{padding: '3vw'}}>
                         <div className="process-main-text-right">
                             Wondering how to get started?
                         </div>
@@ -47,76 +121,45 @@ class Process extends React.Component {
                             Give us an enquiry and start tracking your vehicles seamlessly
                         </div>
                     </Grid>
-                    <Grid container xs={6} style={{padding: '3vw'}}>
-                        <VerticalTimeline>
-                            <VerticalTimelineElement
-                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                position="right"
-                            >
-                                <Typography variant={"title"}>Started M.N Circuits Products</Typography>
-                            </VerticalTimelineElement>
-                            <VerticalTimelineElement
-                                className="vertical-timeline-element--work"
-                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                            >
-                                <Typography variant={"title"}>Started M.N Auto</Typography>
-                            </VerticalTimelineElement>
-                            <VerticalTimelineElement
-                                position="right"
+                </Grid>
+            </div>
+        )
+    };
 
-                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                            >
-                                <Typography variant={"title"}>Becomes a Private Limited Company</Typography>
-                            </VerticalTimelineElement>
-                            <VerticalTimelineElement
-                                className="vertical-timeline-element--work"
-                                iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                            >
-                                <Typography variant={"title"}>Registered the brand name “SUPER”</Typography>
-                            </VerticalTimelineElement>
-                        </VerticalTimeline>
+    renderMobileView = () => {
+        return (
+            <div style={{backgroundColor: "#3DBDFF"}}>
+                <Grid container>
+
+                    <Grid item xs={12} style={{padding: '3vw'}}>
+                        <div className="process-main-text-right">
+                            Wondering how to get started?
+                        </div>
+                        <div className="process-sub-text-right">
+                            Give us an enquiry and start tracking your vehicles seamlessly
+                        </div>
+                    </Grid>
+                    <Grid item xs={12} style={{padding: '3vw'}}>
                     </Grid>
                 </Grid>
             </div>
         )
     };
 
+    choose(width) {
+        if (width <= 480) {
+            return this.renderMobileView();
+        }
+        else return this.renderDesktopView();
+    }
+
     render() {
-        return this.renderDesktopView();
+        return this.choose(this.state.width);
     };
+
+    // render() {
+    //     return this.renderDesktopView();
+    // };
 }
 
 export default Process;
-
-//<Grid item xs={12}>
-//                             <div className="process-main-text-left">
-//                                 Give us an enquiry
-//                             </div>
-//                             <div className="process-sub-text-left">
-//                                 Reach out to us to know more about our product
-//                             </div>
-//                         </Grid>
-//                         <Grid item xs={12}>
-//                             <div className="process-main-text-left">
-//                                 Give us an enquiry
-//                             </div>
-//                             <div className="process-sub-text-left">
-//                                 Reach out to us to know more about our product
-//                             </div>
-//                         </Grid>
-//                         <Grid item xs={12}>
-//                             <div className="process-main-text-left">
-//                                 Give us an enquiry
-//                             </div>
-//                             <div className="process-sub-text-left">
-//                                 Reach out to us to know more about our product
-//                             </div>
-//                         </Grid>
-//                         <Grid item xs={12}>
-//                             <div className="process-main-text-left">
-//                                 Give us an enquiry
-//                             </div>
-//                             <div className="process-sub-text-left">
-//                                 Reach out to us to know more about our product
-//                             </div>
-//                         </Grid>
