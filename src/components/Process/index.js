@@ -139,7 +139,47 @@ class Process extends React.Component {
                             Give us an enquiry and start tracking your vehicles seamlessly
                         </div>
                     </Grid>
-                    <Grid item xs={12} style={{padding: '3vw'}}>
+                    <Grid container xs={12} style={{padding: '3vw'}}>
+                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                            <Grid item xs={12}>
+                                <div className="process-header">
+                                    Product Enquiry
+                                </div>
+                                <div className="process-description" style={{marginTop: 0}}>
+                                    Give us an enquiry
+                                </div>
+                            </Grid>
+                        </Grid>
+                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                            <Grid item xs={12}>
+                                <div className="process-header">
+                                    Product Installation
+                                </div>
+                                <div className="process-description" style={{marginTop: 0}}>
+                                    Install the Product
+                                </div>
+                            </Grid>
+                        </Grid>
+                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                            <Grid item xs={12}>
+                                <div className="process-header">
+                                    KYC Verification
+                                </div>
+                                <div className="process-description" style={{marginTop: 0}}>
+                                    Fulfill the KYC required information
+                                </div>
+                            </Grid>
+                        </Grid>
+                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                            <Grid item xs={12}>
+                                <div className="process-header">
+                                    Use the Product
+                                </div>
+                                <div className="process-description" style={{marginTop: 0}}>
+                                    Start tracking your vehicles at ease
+                                </div>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </div>
