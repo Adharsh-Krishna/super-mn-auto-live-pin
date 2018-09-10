@@ -14,14 +14,24 @@ import SwipeableDrawer from "@material-ui/core/es/SwipeableDrawer/SwipeableDrawe
 import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
+//NavBar styling override
+const navBarStyles = {
+    backgroundColor: 'white',
+    zDepthShadows: 'none',
+    boxShadow: 'none',
+    marginBottom:'30px',
+    zIndex:99
+};
 
-const navBarStyles = {backgroundColor: 'white',zDepthShadows:'none',boxShadow: 'none'};
+const menuIconStyles ={
+    fontSize:'45px'
+};
 
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            labels: ["About", "Products Packages", "Order Now", "FAQ", "Privacy Policy","Contact Us"],
+            labels: ["About", "Products Packages", "Order Now", "FAQ", "Privacy Policy", "Contact Us"],
             height: props.height,
             width: props.width,
             checked: false,
@@ -39,7 +49,7 @@ class NavBar extends React.Component {
     }
 
 
-    handleChange = () => {
+    handleTransition = () => {
         this.setState(state => ({checked: !state.checked}));
     };
 
@@ -58,7 +68,7 @@ class NavBar extends React.Component {
     };
 
     componentDidMount() {
-        this.handleChange();
+        this.handleTransition();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions.bind(this));
     }
@@ -69,60 +79,58 @@ class NavBar extends React.Component {
         return (
             <div>
                 <AppBar position="fixed" style={navBarStyles}>
-                    <Grid container spacing={0} zeroMinWidth>
-                        <Grid item xs={1} style={{padding: 5}}>
+                    <Grid container>
+                        <Grid item xs={1} className="nav-bar-logo-container">
                             <Fade in={checked} timeout={3000}>
-                                <div className="nav-bar-logo">
-                                </div>
+                                <div className="nav-bar-logo-img"></div>
                             </Fade>
                         </Grid>
-                        <Grid item xs={8} style={{padding: 20}}>
-                            <Slide direction="down" in={checked} timeout={2000} mountOnEnter unmountOnExit
-                                   style={{position: 'absolute'}}>
+                        <Grid item xs={8} className="nav-bar-title-container">
+                            <Slide direction="down"
+                                   in={checked}
+                                   timeout={2000}
+                                   mountOnEnter unmountOnExit>
                                 <div align="left" className="nav-bar-title-first">
                                     MN Auto <span className="nav-bar-title-second"> LivePin </span>
                                 </div>
                             </Slide>
                         </Grid>
-                        <Grid item xs={1}>
-                            {/*<Slide direction="right" in={checked} timeout={5000} mountOnEnter unmountOnExit*/}
-                                   {/*style={{position: 'absolute'}}>*/}
-                                {/*<div><img src="./car1.png" className="moving-car"></img></div>*/}
-                            {/*</Slide>*/}
-                        </Grid>
-                        <Grid item xs={1}>
-                            <div>
-                                <Button><span className="nav-bar-login-button">Login</span></Button>
-                            </div>
-                        </Grid>
-                        <Grid item xs={1}>
-                            <div>
-                                <IconButton className="nav-bar-menu-button" aria-label="Menu" style={{marginTop:'1.5vw'}}>
-                                    <MenuIcon style={{fontSize: "3vw"}} onClick={this.toggleDrawer('right', true)}/>
-                                </IconButton>
-                                <SwipeableDrawer
-                                    anchor="right"
-                                    open={this.state.right}
-                                    onClose={this.toggleDrawer('right', false)}
-                                    onOpen={this.toggleDrawer('right', true)}>
-                                    <div
-                                        align="center"
-                                        tabIndex={0}
-                                        role="button"
-                                        onClick={this.toggleDrawer('right', false)}
-                                        onKeyDown={this.toggleDrawer('right', false)}
-                                        className="nav-bar-drawer">
-                                        <div style={{height: '7vw',padding:5}}>
-                                            <IconButton onClick={this.handleDrawerClose}>
-                                                <ChevronRightIcon/>
-                                            </IconButton>
+                        <Grid container xs={3}>
+                            <Grid item xs={8}>
+                                <div className="nav-bar-login-button-container">
+                                    <Button><span className="nav-bar-login-button-text">Login</span></Button>
+                                </div>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <div className="nav-bar-menu-button-container">
+                                    <IconButton aria-label="Menu">
+                                        <MenuIcon style={menuIconStyles} onClick={this.toggleDrawer('right', true)}/>
+                                    </IconButton>
+                                    <SwipeableDrawer
+                                        anchor="right"
+                                        open={this.state.right}
+                                        onClose={this.toggleDrawer('right', false)}
+                                        onOpen={this.toggleDrawer('right', true)}>
+                                        <div
+                                            align="center"
+                                            tabIndex={0}
+                                            role="button"
+                                            onClick={this.toggleDrawer('right', false)}
+                                            onKeyDown={this.toggleDrawer('right', false)}
+                                            className="nav-bar-drawer">
+                                            <div className="nav-bar-chevron-icon-container">
+                                                <IconButton onClick={this.handleDrawerClose}>
+                                                    <ChevronRightIcon/>
+                                                </IconButton>
+                                            </div>
+                                            {this.renderMenuItems()}
+                                            <Divider/>
                                         </div>
-                                        {this.renderMenuItems()}
-                                        <Divider/>
-                                    </div>
-                                </SwipeableDrawer>
-                            </div>
+                                    </SwipeableDrawer>
+                                </div>
+                            </Grid>
                         </Grid>
+
                     </Grid>
                     <div>
                     </div>
@@ -143,31 +151,24 @@ class NavBar extends React.Component {
 
     renderMobileView = () => {
         const {checked} = this.state;
-
         return (
             <div>
                 <AppBar position="fixed" style={navBarStyles}>
                     <Toolbar>
                         <Grid container>
-                            <Grid item xs={1} style={{padding: 5}}>
-                                <Fade in={checked} timeout={3000}>
-                                    <div className="nav-bar-logo">
+                            <Grid item xs={2}>
+                                <Fade in={true} timeout={3000}>
+                                    <div className="nav-bar-logo-img">
                                     </div>
                                 </Fade>
-                                {/*<Slide direction="right" in={checked} timeout={4000} mountOnEnter unmountOnExit*/}
-                                {/*style={{position: 'absolute'}}>*/}
-                                {/*<div><img src="./car1.png" className="moving-car"></img></div>*/}
-                                {/*</Slide>*/}
                             </Grid>
-                            <Grid item xs={8} style={{padding: 10}}>
+                            <Grid item xs={8} className="nav-bar-title-container">
                                 <Slide direction="down" in={checked} timeout={1000} mountOnEnter unmountOnExit
                                        style={{position: 'absolute'}}>
                                     <div align="left" className="nav-bar-title-first">
                                         MN Auto <span className="nav-bar-title-second"> LivePin </span>
                                     </div>
                                 </Slide>
-                            </Grid>
-                            <Grid item xs={1}>
                             </Grid>
                             <Grid item xs={2}>
                                 <IconButton className="nav-bar-menu-button" aria-label="Menu">
@@ -177,13 +178,13 @@ class NavBar extends React.Component {
                                     variant="persistent"
                                     open={this.state.open}
                                     anchor="top">
-                                    <div style={{height: '10vw'}}>
+                                    <div className="nav-bar-chevron-icon-container">
                                         <IconButton onClick={this.handleDrawerClose}>
                                             <ChevronRightIcon/>
                                         </IconButton>
                                     </div>
                                     <Divider/>
-                                    <div style={{backgroundColor:'#3DBDFF'}}>
+                                    <div style={{backgroundColor: '#3DBDFF'}}>
                                         {this.renderMenuItems()}
                                     </div>
                                 </Drawer>

@@ -49,11 +49,11 @@ class About extends React.Component {
             <Grid container>
                 <Grid container xs={6}>
                     <Grid item xs={12}>
-                        <div className="banner-main-text-left">
+                        <div className="banner-main-text-lefty">
                             Realtime location
                             information at your fingertips
                         </div>
-                        <div className="banner-sub-text-left">
+                        <div className="banner-sub-text-lefty">
                             always stay connected to your car with MN Auto LivePin smart web and mobile applications.
                         </div>
                     </Grid>
@@ -61,21 +61,21 @@ class About extends React.Component {
                         <Grid item xs={4}>
                             <div className="real-time-tracking-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Real Time Tracking
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="route-deviation-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Route Deviation Alert
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="high-speed-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Over speed Alerts
                             </div>
                         </Grid>
@@ -84,21 +84,21 @@ class About extends React.Component {
                         <Grid item xs={4}>
                             <div className="multi-vehicle-tracking-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Multi Vehicle tracking
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="engine-immobiliser-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Engine immobiliser
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="theft-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Theft Alerts
                             </div>
                         </Grid>
@@ -118,33 +118,33 @@ class About extends React.Component {
             <Grid container>
                 <Grid container xs={12}>
                     <Grid item xs={12}>
-                        <div className="banner-main-text-left">
+                        <div className="banner-main-text-lefty">
                             Realtime location
                             information at your fingertips
                         </div>
-                        <div className="banner-sub-text-left">
-                            - always stay connected to your car with matchpointGPS smart web and mobile applications.
+                        <div className="banner-sub-text-lefty">
+                            always stay connected to your car with matchpointGPS smart web and mobile applications.
                         </div>
                     </Grid>
-                    <Grid container xs={12} style={{margin:"2vw"}}>
+                    <Grid container xs={12} className="feature-container">
                         <Grid item xs={4}>
                             <div className="real-time-tracking-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Real Time Tracking
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="route-deviation-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Route Deviation Alert
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="high-speed-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Over speed Alerts
                             </div>
                         </Grid>
@@ -153,21 +153,21 @@ class About extends React.Component {
                         <Grid item xs={4}>
                             <div className="multi-vehicle-tracking-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Multi Vehicle tracking
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="engine-immobiliser-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Engine immobiliser
                             </div>
                         </Grid>
                         <Grid item xs={4}>
                             <div className="theft-alert-icon">
                             </div>
-                            <div className="feature-text">
+                            <div className="feature-texty">
                                 Theft Alerts
                             </div>
                         </Grid>
