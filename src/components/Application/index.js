@@ -36,16 +36,16 @@ class Application extends React.Component {
     renderDesktopView = () => {
         const {checked} = this.state;
         return (
-            <div className="hero-bkg-animated" style={{backgroundColor: "white"}}>
+            <div className="hero-bkg-animated">
                 <Grid container>
-                    <Grid item xs={12} style={{marginTop: '3vw'}}>
+                    <Grid item xs={12}>
                         <div className="application-text">
                             Our LivePin has a variety of applications in the following domains
                         </div>
                     </Grid>
 
 
-                    <Grid container xs={12} style={{marginTop: '3vw', marginBottom: '2vw'}}>
+                    <Grid container xs={12} className="application-container">
                         <Grid item xs={2}>
 
                         </Grid>
@@ -121,8 +121,96 @@ class Application extends React.Component {
         )
     };
 
+
+    renderMobileView = () => {
+        const {checked} = this.state;
+        return (<div className="hero-bkg-animated">
+            <Grid container>
+                <Grid item xs={12}>
+                    <div className="application-text">
+                        Our LivePin has a variety of applications in the following domains
+                    </div>
+                </Grid>
+
+
+                <Grid container xs={12}>
+                    <Grid item xs={12}>
+                        <TrackVisibility once>
+                            {({isVisible}) => isVisible &&
+                                <Fade in={checked} timeout={3000}>
+                                    <div>
+                                        <div className="school-icon">
+                                        </div>
+                                        <div className="icon-text">
+                                            Schools and Colleges
+                                        </div>
+                                    </div>
+                                </Fade>
+                            }
+                        </TrackVisibility>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TrackVisibility once>
+                            {({isVisible}) => isVisible &&
+                                <Fade in={checked} timeout={3000}>
+                                    <div>
+                                        <div className="taxi-dispatch-icon">
+                                        </div>
+                                        <div className="icon-text">
+                                            Logistics
+                                        </div>
+                                    </div>
+                                </Fade>
+                            }
+                        </TrackVisibility>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TrackVisibility once>
+                            {({isVisible}) => isVisible &&
+                                <Fade in={checked} timeout={3000}>
+                                    <div>
+                                        <div className="school-icon">
+                                        </div>
+                                        <div className="icon-text">
+                                            Fleet Management
+                                        </div>
+                                    </div>
+                                </Fade>
+                            }
+                        </TrackVisibility>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TrackVisibility once>
+                            {({isVisible}) => isVisible &&
+                                <Fade in={checked} timeout={3000}>
+                                    <div>
+                                        <div className="taxi-dispatch-icon">
+                                        </div>
+                                        <div className="icon-text">
+                                            Taxi Dispatch
+                                        </div>
+                                    </div>
+                                </Fade>
+                            }
+                        </TrackVisibility>
+
+                    </Grid>
+                </Grid>
+
+
+            </Grid>
+        </div>)
+    };
+
+    choose(width) {
+        if (width <= 480) {
+            return this.renderMobileView();
+        }
+        else return this.renderDesktopView();
+    }
+
     render() {
-        return this.renderDesktopView();
+        return this.choose(this.state.width);
     };
 }
 

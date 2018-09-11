@@ -1,15 +1,9 @@
 import React from 'react';
 import './index.css';
-import {Timeline, TimelineEvent} from 'react-event-timeline';
-
-import Stepper from "@material-ui/core/es/Stepper/Stepper";
-import Step from "@material-ui/core/es/Step/Step";
-import StepLabel from "@material-ui/core/es/StepLabel/StepLabel";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 
-import Typography from "@material-ui/core/es/Typography/Typography";
 
 class Process extends React.Component {
     constructor(props) {
@@ -36,16 +30,12 @@ class Process extends React.Component {
 
     renderDesktopView = () => {
         return (
-            <div style={{backgroundColor: "#3DBDFF"}}>
+            <div className="process">
                 <Grid container>
-
-                    <Grid container xs={8} style={{padding: '3vw'}}>
+                    <Grid container xs={8} className="process-container">
                         <VerticalTimeline>
                             <VerticalTimelineElement
-                                iconStyle={{background: 'white', color: '#fff'}} position="left"
-                                position="left"
-
-                            >
+                                iconStyle={{background: 'white', color: '#fff'}} position="left">
                                 <Grid container>
                                     <Grid iem xs={12}>
                                         <div className="process-header">
@@ -60,9 +50,7 @@ class Process extends React.Component {
                                 </Grid>
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
-                                iconStyle={{background: 'white', color: '#fff'}}
-                                position="left"
-                            >
+                                iconStyle={{background: 'white', color: '#fff'}} position="left">
                                 <Grid container>
                                     <Grid iem xs={12}>
                                         <div className="process-header">
@@ -78,9 +66,7 @@ class Process extends React.Component {
 
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
-                                iconStyle={{background: 'white', color: '#fff'}}
-                                position="left"
-                            >
+                                iconStyle={{background: 'white', color: '#fff'}} position="left">
                                 <Grid container>
                                     <Grid iem xs={12}>
                                         <div className="process-header">
@@ -95,9 +81,7 @@ class Process extends React.Component {
                                 </Grid>
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
-                                iconStyle={{background: 'white', color: '#fff'}}
-                                position="left"
-                            >
+                                iconStyle={{background: 'white', color: '#fff'}} position="left">
                                 <Grid container>
                                     <Grid iem xs={12}>
                                         <div className="process-header">
@@ -105,7 +89,7 @@ class Process extends React.Component {
                                         </div>
                                     </Grid>
                                     <Grid iem xs={12}>
-                                        <div className="process-description" style={{marginTop: 0}}>
+                                        <div className="process-description">
                                             Track your vehicles on the go
                                         </div>
                                     </Grid>
@@ -113,7 +97,7 @@ class Process extends React.Component {
                             </VerticalTimelineElement>
                         </VerticalTimeline>
                     </Grid>
-                    <Grid item xs={4} style={{padding: '3vw'}}>
+                    <Grid item xs={4} className="process-container-right">
                         <div className="process-main-text-right">
                             Wondering how to get started?
                         </div>
@@ -128,10 +112,10 @@ class Process extends React.Component {
 
     renderMobileView = () => {
         return (
-            <div style={{backgroundColor: "#3DBDFF"}}>
+            <div className="process">
                 <Grid container>
 
-                    <Grid item xs={12} style={{padding: '3vw'}}>
+                    <Grid item xs={12} className="process-container">
                         <div className="process-main-text-right">
                             Wondering how to get started?
                         </div>
@@ -140,7 +124,7 @@ class Process extends React.Component {
                         </div>
                     </Grid>
                     <Grid container xs={12} style={{padding: '3vw'}}>
-                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                        <Grid container xs={12} className="process-item">
                             <Grid item xs={12}>
                                 <div className="process-header">
                                     Product Enquiry
@@ -150,7 +134,7 @@ class Process extends React.Component {
                                 </div>
                             </Grid>
                         </Grid>
-                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                        <Grid container xs={12} className="process-item">
                             <Grid item xs={12}>
                                 <div className="process-header">
                                     Product Installation
@@ -160,7 +144,7 @@ class Process extends React.Component {
                                 </div>
                             </Grid>
                         </Grid>
-                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                        <Grid container xs={12} className="process-item">
                             <Grid item xs={12}>
                                 <div className="process-header">
                                     KYC Verification
@@ -170,7 +154,7 @@ class Process extends React.Component {
                                 </div>
                             </Grid>
                         </Grid>
-                        <Grid container xs={12} style={{marginBottom:'2vw'}}>
+                        <Grid container xs={12} className="process-item">
                             <Grid item xs={12}>
                                 <div className="process-header">
                                     Use the Product
@@ -196,10 +180,6 @@ class Process extends React.Component {
     render() {
         return this.choose(this.state.width);
     };
-
-    // render() {
-    //     return this.renderDesktopView();
-    // };
 }
 
 export default Process;

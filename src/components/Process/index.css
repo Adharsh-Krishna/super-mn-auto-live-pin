@@ -1,44 +1,60 @@
-.process-main-text-right{
+.process {
+    background-color: #3DBDFF;
+}
+
+.process-container {
+    padding: 3vw;
+}
+
+.process-item {
+    margin-bottom: 2vw;
+}
+
+.process-container-right {
+    padding: 4vw;
+}
+
+.process-main-text-right {
     font-family: 'Lato', sans-serif;
     font-size: 3.5vw;
     color: white;
     padding-bottom: 2vw;
 }
 
-.process-sub-text-right{
+.process-sub-text-right {
     font-family: 'Lato', sans-serif;
     font-size: 2vw;
     color: white;
 }
 
-.process-main-text-left{
+.process-main-text-left {
     font-family: 'Lato', sans-serif;
     font-size: 3vw;
     color: white;
     padding-bottom: 2vw;
 }
 
-.process-sub-text-left{
+.process-sub-text-left {
     font-family: 'Lato', sans-serif;
     font-size: 2vw;
     color: white;
     padding-bottom: 2vw;
 }
 
-.process-header{
+.process-header {
     font-family: 'Lato', sans-serif;
     font-size: 2.5vw;
     color: white;
 }
 
-.process-description{
-    padding-top:1vw;
+.process-description {
+    padding-top: 1vw;
     font-family: 'Lato', sans-serif;
     font-size: 1.5vw;
     color: white;
 }
 
-.vertical-timeline-element-content{
+.vertical-timeline-element-content {
     /*padding-left: 1vw;*/
     padding: 0px;
     border: none;
@@ -47,6 +63,68 @@
     visibility: visible;
 }
 
-.vertical-timeline-element-content.is-hidden{
+.vertical-timeline-element-content.is-hidden {
     visibility: visible;
+}
+
+@media handheld, screen and (min-width: 300px) and (max-width: 499px) {
+    .process-container {
+        padding: 20px;
+    }
+
+    .process-main-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        color: white;
+        padding-bottom: 10px;
+    }
+
+    .process-sub-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+
+    .process-header {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+
+    .process-description {
+        padding-top: 1vw;
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        color: white;
+    }
+
+}
+
+@media handheld, screen and (min-width: 1300px) and (max-width: 1920px) {
+    .process-main-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 40px;
+        color: white;
+        padding-bottom: 2vw;
+    }
+
+    .process-sub-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    .process-header {
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    .process-description {
+        padding-top: 1vw;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+
 }

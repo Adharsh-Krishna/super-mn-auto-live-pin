@@ -290,9 +290,6 @@ class Package extends React.Component {
         return this.choose(this.state.width);
     };
 
-    // render() {
-    //     return this.renderDesktopView();
-    // };
 }
 
 export default Package;
