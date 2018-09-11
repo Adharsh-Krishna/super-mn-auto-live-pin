@@ -1,8 +1,4 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -20,7 +16,7 @@ import Fade from "@material-ui/core/es/Fade/Fade";
 
 const Transition = (props) => {
     return <Slide direction="up" {...props} />;
-}
+};
 
 class Package extends React.Component {
     constructor(props) {
@@ -60,22 +56,19 @@ class Package extends React.Component {
         this.setState({ open: false });
     };
 
-    change(){
-
-    }
 
     renderDesktopView = () => {
         const {checked} = this.state;
         return (
             <div className="hero-bkg-animated">
-                <Grid container style={{padding: "20px"}}>
+                <Grid container className="package">
                     <Grid item xs={12}>
                         <div className="main-text">
                             M N Auto brings you a wide variety of models to choose from
                         </div>
                     </Grid>
                     <Grid container xs={12}>
-                        <Grid item xs={4} style={{padding: '5vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <div onClick={this.handleClickOpen}>
                                 <TrackVisibility once>
                                     {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
@@ -86,7 +79,7 @@ class Package extends React.Component {
                                                 image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                                 title="Model 1"
                                             />
-                                            <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                            <div>
                                                 <div className="card-heading">
                                                     Model 1
                                                 </div>
@@ -102,7 +95,7 @@ class Package extends React.Component {
                                 </TrackVisibility>
                             </div>
                         </Grid>
-                        <Grid item xs={4} style={{padding: '5vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <TrackVisibility once>
                                 {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                 <div>
@@ -111,7 +104,7 @@ class Package extends React.Component {
                                         image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                         title="Model 2"
                                     />
-                                    <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                    <div>
                                         <div className="card-heading">
                                             Model 2
                                         </div>
@@ -126,7 +119,7 @@ class Package extends React.Component {
                                 </Fade>}
                             </TrackVisibility>
                         </Grid>
-                        <Grid item xs={4} style={{padding: '5vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <TrackVisibility once>
                                 {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                 <div>
@@ -135,7 +128,7 @@ class Package extends React.Component {
                                         image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                         title="Model 3"
                                     />
-                                    <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                    <div>
                                         <div className="card-heading">
                                             Model 3
                                         </div>
@@ -179,14 +172,14 @@ class Package extends React.Component {
         const {checked} = this.state;
         return (
             <div className="hero-bkg-animated">
-                <Grid container style={{padding: "20px"}}>
+                <Grid container className="package">
                     <Grid item xs={12}>
                         <div className="main-text">
                             M N Auto brings you a wide variety of models to choose from
                         </div>
                     </Grid>
                     <Grid container xs={12}>
-                        <Grid item xs={4} style={{padding: '2vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <div onClick={this.handleClickOpen}>
                                 <TrackVisibility once>
                                     {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
@@ -197,7 +190,7 @@ class Package extends React.Component {
                                                 image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                                 title="Model 1"
                                             />
-                                            <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                            <div>
                                                 <div className="card-heading">
                                                     Model 1
                                                 </div>
@@ -213,7 +206,7 @@ class Package extends React.Component {
                                 </TrackVisibility>
                             </div>
                         </Grid>
-                        <Grid item xs={4} style={{padding: '2vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <TrackVisibility once>
                                 {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                     <div>
@@ -222,7 +215,7 @@ class Package extends React.Component {
                                             image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                             title="Model 2"
                                         />
-                                        <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                        <div>
                                             <div className="card-heading">
                                                 Model 2
                                             </div>
@@ -237,7 +230,7 @@ class Package extends React.Component {
                                 </Fade>}
                             </TrackVisibility>
                         </Grid>
-                        <Grid item xs={4} style={{padding: '2vw'}}>
+                        <Grid item xs={4} className="package-item">
                             <TrackVisibility once>
                                 {({ isVisible }) => isVisible && <Fade in={checked} timeout={2000}>
                                     <div>
@@ -246,7 +239,7 @@ class Package extends React.Component {
                                             image="http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg"
                                             title="Model 3"
                                         />
-                                        <div style={{backgroundColor: "#3DBDFF", color: "white"}}>
+                                        <div>
                                             <div className="card-heading">
                                                 Model 3
                                             </div>

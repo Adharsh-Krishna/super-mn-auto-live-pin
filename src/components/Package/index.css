@@ -1,3 +1,11 @@
+.package {
+    padding: 20px;
+}
+
+.package-item {
+    padding: 50px;
+}
+
 .model1-image {
     background-image: url("http://2.bp.blogspot.com/-dPhIDZ-7USY/UETz33rBt4I/AAAAAAAAApI/gegoZuHDjuE/s1600/Blue+abstract++PiCsHoliC.Blogspot.jpg");
     background-repeat: no-repeat;
@@ -6,12 +14,17 @@
     max-width: 100%;
 }
 
+/*.card-item {*/
+/*backgroundColor: #3DBDFF;*/
+/*color: white;*/
+/*}*/
+
 .card-heading {
     font-family: 'Lato', sans-serif;
     font-size: 2vw;
     background-color: black;
-    color:white;
-    padding:1vw;
+    color: white;
+    padding: 1vw;
 }
 
 .main-text {
@@ -21,22 +34,24 @@
     margin-bottom: 2vw;
 }
 
-.card-body{
+.card-body {
     font-family: 'Lato', sans-serif;
     font-size: 1.5vw;
     color: white;
     padding: 2vw;
     text-align: justify;
-}
-.banner-main-text-left{
-    font-family: 'Lato', sans-serif;
-    font-size: 3.5vw;
-    color: white;
+    background-color: #3DBDFF;
 }
 
-.real-time-tracking-icon , .route-deviation-alert-icon ,
-.high-speed-alert-icon,.multi-vehicle-tracking-icon,
-.engine-immobiliser-icon,.theft-alert-icon{
+/*.banner-main-text-left {*/
+/*font-family: 'Lato', sans-serif;*/
+/*font-size: 3.5vw;*/
+/*color: white;*/
+/*}*/
+
+.real-time-tracking-icon, .route-deviation-alert-icon,
+.high-speed-alert-icon, .multi-vehicle-tracking-icon,
+.engine-immobiliser-icon, .theft-alert-icon {
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,31 +61,31 @@
     margin-right: auto;
 }
 
-.real-time-tracking-icon{
+.real-time-tracking-icon {
     background-image: url("../About/1.png");
 }
 
-.route-deviation-alert-icon{
+.route-deviation-alert-icon {
     background-image: url("../About/2.png");
 }
 
-.high-speed-alert-icon{
+.high-speed-alert-icon {
     background-image: url("../About/3.png");
 }
 
-.multi-vehicle-tracking-icon{
+.multi-vehicle-tracking-icon {
     background-image: url("../About/4.png");
 }
 
-.engine-immobiliser-icon{
+.engine-immobiliser-icon {
     background-image: url("../About/5.png");
 }
 
-.theft-alert-icon{
+.theft-alert-icon {
     background-image: url("../About/6.png");
 }
 
-.feature-text{
+.feature-text {
     font-family: 'Lato', sans-serif;
     font-size: 1.5vw;
     color: white;
@@ -92,6 +107,61 @@
 }
 
 @-webkit-keyframes slide {
-    from { background-position: 0 0; }
-    to { background-position: -400px 0; }
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -400px 0;
+    }
+}
+
+/*FOR MOBILES*/
+@media handheld, screen and (min-width: 300px) and (max-width: 499px) {
+    .main-text {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        color: #3DBDFF;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .package-item {
+        padding: 1.5vw;
+    }
+
+    .card-body {
+        font-family: 'Lato', sans-serif;
+        font-size: 8px;
+        color: white;
+        /*padding: 2vw;*/
+        text-align: justify;
+    }
+
+    .package {
+        padding: 10px;
+    }
+}
+
+/*FOR LARGER SCREENS*/
+@media handheld, screen and (min-width: 1300px) and (max-width: 1920px) {
+
+    .main-text {
+        font-family: 'Lato', sans-serif;
+        font-size: 45px;
+        color: #3DBDFF;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .card-body {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25vw;
+        color: white;
+        padding: 2vw;
+        text-align: justify;
+    }
+
+    .package-item {
+        padding: 6vw;
+    }
 }

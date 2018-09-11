@@ -1,5 +1,8 @@
 .banner {
     background-color: #3DBDFF;
+    padding: 2vw;
+    /*backgroundColor: #3DBDFF;*/
+
 }
 
 .banner-main-text-lefty {
@@ -28,8 +31,8 @@
 
     background-repeat: no-repeat;
     background-size: cover;
-    width: 7vw;
-    height: 7vw;
+    /*width: 10px;*/
+    /*height: 7vw;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -112,6 +115,18 @@
         font-size: 30px;
         color: white;
         padding-top: 1vw;
+    }
+
+    .real-time-tracking-icon, .route-deviation-alert-icon,
+    .high-speed-alert-icon, .multi-vehicle-tracking-icon,
+    .engine-immobiliser-icon, .theft-alert-icon {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*width: 10px;*/
+        /*height: 10px;*/
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
