@@ -17,7 +17,15 @@
     font-size: 1vw;
 }
 
-.phone-text{
+.contact {
+    background-color: #3DBDFF;
+}
+
+.contact-container {
+    padding: 2vw;
+}
+
+.phone-text {
     font-family: 'Lato', sans-serif;
     color: white;
     font-size: 2vw;
@@ -44,11 +52,12 @@
     margin-top: 0vw;
 
 }
-.phone-icon{
+
+.phone-icon {
     background-image: url("call.png");
 }
 
-.email-icon{
+.email-icon {
     background-image: url("email.png");
 }
 
@@ -58,4 +67,90 @@
 
 .app-store-png {
     background-image: url("appstore.png");
+}
+
+
+
+@media handheld, screen and (min-width: 300px) and (max-width: 499px) {
+
+    .main-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        color: white;
+    }
+
+    .play-store-png, .app-store-png {
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50px;
+        margin-top: 0vw;
+
+    }
+
+    .phone-icon, .email-icon {
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 10px;
+        width: 3vw;
+        margin-top: 0vw;
+    }
+
+    .phone-text {
+        font-family: 'Lato', sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+
+    .address-text {
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        color: white;
+        margin: 1vw;
+    }
+}
+
+@media handheld, screen and (min-width: 1300px) and (max-width: 1920px) {
+
+    .main-text-right {
+        font-family: 'Lato', sans-serif;
+        font-size: 40px;
+        color: white;
+    }
+
+    .play-store-png, .app-store-png {
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50px;
+        margin-top: 0vw;
+
+    }
+
+    .phone-icon, .email-icon {
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 30px;
+        width: 3vw;
+        margin-top: 0vw;
+    }
+
+    .phone-text {
+        font-family: 'Lato', sans-serif;
+        color: white;
+        font-size: 20px;
+    }
+
+    .address-text {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        color: white;
+        margin: 1vw;
+    }
 }

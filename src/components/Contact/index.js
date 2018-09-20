@@ -37,9 +37,9 @@ class Contact extends React.Component {
     renderDesktopView = () => {
 
         return (
-            <div style={{backgroundColor: "#3DBDFF"}}>
+            <div className="contact">
                 <Grid container>
-                    <Grid container item={12} style={{padding: '2vw'}}>
+                    <Grid container item={12} className="contact-container">
                         <Grid container xs={4}>
                             <Grid item xs={12}>
                                 <div className="main-text-right">

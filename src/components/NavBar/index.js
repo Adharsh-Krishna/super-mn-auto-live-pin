@@ -14,17 +14,25 @@ import SwipeableDrawer from "@material-ui/core/es/SwipeableDrawer/SwipeableDrawe
 import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
+import {withRouter} from 'react-router-dom'
+// import {Router,Route,withRouter} from 'react-router';
+// import {BrowserRouter as Router,withRouter, Switch, Route, Link} from 'react-router-dom';
+// import Home from './home';
+// import Link from "react-router-dom/es/Link";
+
+// import { hashHistory } from 'react-router;'
+
 //NavBar styling override
 const navBarStyles = {
     backgroundColor: 'white',
     zDepthShadows: 'none',
     boxShadow: 'none',
-    marginBottom:'30px',
-    zIndex:99
+    marginBottom: '30px',
+    zIndex: 99
 };
 
-const menuIconStyles ={
-    fontSize:'45px'
+const menuIconStyles = {
+    fontSize: '45px'
 };
 
 class NavBar extends React.Component {
@@ -39,6 +47,10 @@ class NavBar extends React.Component {
             open: false
         };
     };
+
+    // navigateToHome() {
+    //     this.props.router.push("/about");
+    // }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
@@ -69,6 +81,7 @@ class NavBar extends React.Component {
 
     componentDidMount() {
         this.handleTransition();
+        // this.navigateToHome = this.navigateToHome.bind(this);
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions.bind(this));
     }
@@ -104,7 +117,8 @@ class NavBar extends React.Component {
                             <Grid item xs={4}>
                                 <div className="nav-bar-menu-button-container">
                                     <IconButton aria-label="Menu">
-                                        <MenuIcon style={menuIconStyles} onClick={this.toggleDrawer('right', true)}/>
+                                        <MenuIcon style={menuIconStyles}
+                                                  onClick={this.toggleDrawer('right', true)}/>
                                     </IconButton>
                                     <SwipeableDrawer
                                         anchor="right"
@@ -212,5 +226,6 @@ NavBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
+export default withRouter(NavBar);
 
-export default (NavBar);
+// export default NavBar;
