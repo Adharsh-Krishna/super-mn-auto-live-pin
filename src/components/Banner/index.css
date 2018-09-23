@@ -1,0 +1,10 @@
+.banner-img {
+    /*background-image: url("https://videotron.com/vtrn/images/resi/mobilite/appareils/telephones/app-iphone-se/res-app-iphone-se-vig-01-or_1200x1200.png");*/
+    background-image: url("Map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+}

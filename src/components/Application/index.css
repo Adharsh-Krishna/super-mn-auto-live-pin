@@ -1,26 +1,26 @@
 .school-icon, .logistics-icon, .fleet-icon, .taxi-dispatch-icon {
     background-repeat: no-repeat;
     background-size: contain;
-    width: 7vw;
-    height: 7vw;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .school-icon {
-    background-image: url("school.png");
+    background-image: url("Schools and Colleges.png");
 }
 
 .logistics-icon {
-    background-image: url("logistics.png");
+    background-image: url("Logistics-01.png");
 }
 
 .fleet-icon {
-    background-image: url("fleet.png");
+    background-image: url("Fleet Management.png");
 }
 
 .taxi-dispatch-icon {
-    background-image: url("taxi.png");
+    background-image: url("Taxi Dispatch.png");
 }
 
 .application-text {
@@ -48,8 +48,8 @@
     .school-icon, .logistics-icon, .fleet-icon, .taxi-dispatch-icon {
         background-repeat: no-repeat;
         background-size: contain;
-        width: 40px;
-        height: 40px;
+        width:100px;
+        height: 100px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -73,8 +73,8 @@
     .school-icon, .logistics-icon, .fleet-icon, .taxi-dispatch-icon {
         background-repeat: no-repeat;
         background-size: contain;
-        width: 70px;
-        height: 70px;
+        width: 150px;
+        height: 150px;
         margin-left: auto;
         margin-right: auto;
     }

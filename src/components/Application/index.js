@@ -69,7 +69,7 @@ class Application extends React.Component {
                                 {({isVisible}) => isVisible &&
                                     <Fade in={checked} timeout={3000}>
                                         <div>
-                                            <div className="taxi-dispatch-icon">
+                                            <div className="logistics-icon">
                                             </div>
                                             <div className="icon-text">
                                                 Logistics
@@ -84,7 +84,7 @@ class Application extends React.Component {
                                 {({isVisible}) => isVisible &&
                                     <Fade in={checked} timeout={3000}>
                                         <div>
-                                            <div className="school-icon">
+                                            <div className="fleet-icon">
                                             </div>
                                             <div className="icon-text">
                                                 Fleet Management
@@ -154,7 +154,7 @@ class Application extends React.Component {
                             {({isVisible}) => isVisible &&
                                 <Fade in={checked} timeout={3000}>
                                     <div>
-                                        <div className="taxi-dispatch-icon">
+                                        <div className="logistics-icon">
                                         </div>
                                         <div className="icon-text">
                                             Logistics
@@ -169,7 +169,7 @@ class Application extends React.Component {
                             {({isVisible}) => isVisible &&
                                 <Fade in={checked} timeout={3000}>
                                     <div>
-                                        <div className="school-icon">
+                                        <div className="fleet-icon">
                                         </div>
                                         <div className="icon-text">
                                             Fleet Management

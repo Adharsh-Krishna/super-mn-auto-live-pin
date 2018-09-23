@@ -33,7 +33,7 @@ class About extends React.Component {
     };
 
 
-    renderDesktopView= () =>{
+    renderDesktopView = () => {
         return (<div className="banner">
             <Grid container>
                 <Grid container xs={6}>
@@ -93,16 +93,19 @@ class About extends React.Component {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                    <div className="iphone-img">
-
-                    </div>
+                <Grid container xs={6}>
+                    <Grid item xs={12}>
+                        <div className="mobile-and-laptop-img"></div>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <div className="flash-text-right">Now track your vehicles from Mobile , Laptop and other devices at your own convenience.</div>
+                    </Grid>
                 </Grid>
             </Grid>
         </div>)
     };
 
-    renderMobileView = () =>{
+    renderMobileView = () => {
         return (<div className="banner">
             <Grid container>
                 <Grid container xs={12}>
@@ -138,7 +141,7 @@ class About extends React.Component {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid container xs={12} style={{margin:"2vw"}}>
+                    <Grid container xs={12} className="feature-container">
                         <Grid item xs={4}>
                             <div className="multi-vehicle-tracking-icon">
                             </div>

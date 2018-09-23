@@ -9,11 +9,11 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 class CarouselPage extends React.Component {
     render(){
         return(
-            <div style={{paddingTop:'6vw'}}>
+            <div>
                 <Carousel showThumbs={false} autoPlay interval={4000} showIndicators={false}
                           infiniteLoop>
                     <div>
-                        <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-white-solid-color-background.jpg"/>
+                        <img src="/maps.png"/>
                     </div>
                     {/*<div>*/}
                         {/*<img src="https://ak8.picdn.net/shutterstock/videos/32813758/thumb/12.jpg" />*/}

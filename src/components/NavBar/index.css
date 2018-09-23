@@ -27,6 +27,14 @@
         /*padding-top: 3vw*/
     }
 
+    .nav-bar-privacy-policy-text {
+        color: #3DBDFF;
+        background-color: green;
+        font-family: 'Exo', sans-serif;
+        font-size: 1vw;
+        padding-top: 3vw
+    }
+
     .nav-bar-logo-container {
         padding: 1vw;
     }
