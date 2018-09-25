@@ -15,6 +15,7 @@ import Drawer from "@material-ui/core/es/Drawer/Drawer";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import {withRouter} from 'react-router-dom'
+import Link from "react-router-dom/es/Link";
 // import {Router,Route,withRouter} from 'react-router';
 // import {BrowserRouter as Router,withRouter, Switch, Route, Link} from 'react-router-dom';
 // import Home from './home';
@@ -98,52 +99,81 @@ class NavBar extends React.Component {
                                 <div className="nav-bar-logo-img"></div>
                             </Fade>
                         </Grid>
-                        <Grid item xs={8} className="nav-bar-title-container">
+                        <Grid item xs={4} className="nav-bar-title-container">
                             <Slide direction="down"
                                    in={checked}
                                    timeout={2000}
                                    mountOnEnter unmountOnExit>
-                                <div align="left" className="nav-bar-title-first">
-                                    MN Auto <span className="nav-bar-title-second"> LivePin </span>
-                                </div>
+                                <Link to={'/'} style={{textDecoration: 'none'}}>
+                                    <div align="left" className="nav-bar-title-first">
+                                        MN Auto <span className="nav-bar-title-second"> LivePin </span>
+                                    </div>
+                                </Link>
                             </Slide>
                         </Grid>
-                        <Grid container xs={3}>
-                            <Grid item xs={8}>
-                                <div className="nav-bar-login-button-container">
-                                    <Button><span className="nav-bar-login-button-text">Login</span></Button>
-                                </div>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <div className="nav-bar-menu-button-container">
-                                    <IconButton aria-label="Menu">
-                                        <MenuIcon style={menuIconStyles}
-                                                  onClick={this.toggleDrawer('right', true)}/>
-                                    </IconButton>
-                                    <SwipeableDrawer
-                                        anchor="right"
-                                        open={this.state.right}
-                                        onClose={this.toggleDrawer('right', false)}
-                                        onOpen={this.toggleDrawer('right', true)}>
-                                        <div
-                                            align="center"
-                                            tabIndex={0}
-                                            role="button"
-                                            onClick={this.toggleDrawer('right', false)}
-                                            onKeyDown={this.toggleDrawer('right', false)}
-                                            className="nav-bar-drawer">
-                                            <div className="nav-bar-chevron-icon-container">
-                                                <IconButton onClick={this.handleDrawerClose}>
-                                                    <ChevronRightIcon/>
-                                                </IconButton>
-                                            </div>
-                                            {this.renderMenuItems()}
-                                            <Divider/>
-                                        </div>
-                                    </SwipeableDrawer>
-                                </div>
-                            </Grid>
+                        <Grid item xs={3}>
+                            <div className="nav-bar-login-button-container">
+                                <Link to={'/privacy_policy'} style={{textDecoration: 'none'}}>
+                                    <Button>
+                                        <span className="nav-bar-login-button-text">Privacy Policy</span>
+                                    </Button>
+                                </Link>
+                            </div>
                         </Grid>
+                        <Grid item xs={2}>
+                            <div className="nav-bar-login-button-container">
+                                <Link to={'/faq'} style={{textDecoration: 'none'}}>
+                                    <Button>
+                                        <span className="nav-bar-login-button-text">Faq</span>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </Grid>
+                        <Grid item xs={2}>
+                            <div className="nav-bar-login-button-container">
+                                <Link to={'/login'} style={{textDecoration: 'none'}}>
+                                    <Button>
+                                        <span className="nav-bar-login-button-text">Login</span>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </Grid>
+                        {/*<Grid container xs={3}>*/}
+                        {/*<Grid item xs={8}>*/}
+                        {/*<div className="nav-bar-login-button-container">*/}
+                        {/*<Button><span className="nav-bar-login-button-text">Login</span></Button>*/}
+                        {/*</div>*/}
+                        {/*</Grid>*/}
+                        {/*<Grid item xs={4}>*/}
+                        {/*<div className="nav-bar-menu-button-container">*/}
+                        {/*<IconButton aria-label="Menu">*/}
+                        {/*<MenuIcon style={menuIconStyles}*/}
+                        {/*onClick={this.toggleDrawer('right', true)}/>*/}
+                        {/*</IconButton>*/}
+                        {/*<SwipeableDrawer*/}
+                        {/*anchor="right"*/}
+                        {/*open={this.state.right}*/}
+                        {/*onClose={this.toggleDrawer('right', false)}*/}
+                        {/*onOpen={this.toggleDrawer('right', true)}>*/}
+                        {/*<div*/}
+                        {/*align="center"*/}
+                        {/*tabIndex={0}*/}
+                        {/*role="button"*/}
+                        {/*onClick={this.toggleDrawer('right', false)}*/}
+                        {/*onKeyDown={this.toggleDrawer('right', false)}*/}
+                        {/*className="nav-bar-drawer">*/}
+                        {/*<div className="nav-bar-chevron-icon-container">*/}
+                        {/*<IconButton onClick={this.handleDrawerClose}>*/}
+                        {/*<ChevronRightIcon/>*/}
+                        {/*</IconButton>*/}
+                        {/*</div>*/}
+                        {/*{this.renderMenuItems()}*/}
+                        {/*<Divider/>*/}
+                        {/*</div>*/}
+                        {/*</SwipeableDrawer>*/}
+                        {/*</div>*/}
+                        {/*</Grid>*/}
+                        {/*</Grid>*/}
 
                     </Grid>
                     <div>

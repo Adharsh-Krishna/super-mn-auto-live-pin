@@ -5,9 +5,8 @@ import Divider from "@material-ui/core/es/Divider/Divider";
 class PrivacyPolicyContent extends React.Component {
 
     render() {
-        return (<div>
-            <div className="privacy-policy-container">
-                <Divider/>
+        return (<div className="hero-bkg-animated">
+            <div className="privacy-policy-container ">
                 <div className="privacy-policy-heading">
                     Privacy Policy
                 </div>
